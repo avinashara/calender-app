@@ -1,0 +1,20 @@
+@import 'styles/_init';
+.name{
+    display: inline;
+}
+.calendar-by-month{
+
+    &_days{
+        @include map-font-style(header-list, jp-large);        
+        height: 23px;
+        font-size: 20px;
+        margin-bottom: 9px;
+        display: inline-block;
+        width: 13.6%;
+    }
+    &_week-day{
+        display: inline-block;
+        width: 13.6%;
+        text-align: left;
+    }
+}

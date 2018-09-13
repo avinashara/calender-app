@@ -1,26 +1,32 @@
-.calender{
-    border-top: 6px solid pacific-blue;
-    border-bottom: 4px solid medium-grey;
+@import 'styles/_init';
+.calendar{
+    border-top: 6px solid map-get($jp-colors, pacific-blue);
+    border-bottom: 4px solid map-get($jp-colors, medium-grey);
+    padding: 1%;
     &_day-month-toggle{
-        display: inline;
-        margin:46px 0px 30px 0px;
+        display: flex;
+        margin: 46px 0px 30px 30px;  
+        text-align: center;  
+        cursor: pointer;    
         &_month{
             width: 150px;
-            height: 49px;
+            height: 49px;            
+            display: inline-flex;
             &_text{
-                padding: 15px 0px 15px 0px;
+                padding: 15px;
                 width: 100%;
+                border: 1px solid grey;
             }
         }
     }
     &_selected-text{
-        margin-top:46px;
+        margin-left: 391px;
     }
     &_result-region{
         margin-top: 30px;
     }
 }
 .fill{
-    background-color: blue;
-    color: white
+    background-color: map-get($jp-colors, pacific-blue);;
+    color: map-get($jp-colors, white);
 }

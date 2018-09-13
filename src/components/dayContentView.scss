@@ -1,0 +1,47 @@
+@import 'styles/_init';
+.day-content{
+    width: 200px;
+    height: 198px;
+    padding: 5px;
+    background-color: map-get($jp-colors, white);
+    border: solid 1px #93989e;
+    display: block;
+
+    &_day-text{
+        @include map-font-style(link-text, jp-large);         
+        width: 26px;
+        height: 27px;
+        opacity: 0.7;
+        font-size: 24px;        
+    }
+    &_day-title{
+        @include map-font-style(body-copy-light, jp-large);
+        width: 180px;
+        height: 20px;
+        opacity: 0.4;
+        padding-bottom:8px;
+
+    }
+    &_day-events{
+        @include map-font-style(body-copy-light, jp-large); 
+        padding-bottom: 8px;
+        width: 180px;
+        height: 28px;
+        opacity: 0.4;
+        font-size: 12px;
+    }
+    &_day-button{
+        @include map-font-style(body-copy-light, jp-large);        
+        width: 84px;
+        height: 18px;
+        opacity: 0.4;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &_hide{
+        display: none;
+    }
+}
+.border{
+    border: solid 3px map-get($jp-colors, mango);;
+}

@@ -1,0 +1,31 @@
+@import 'styles/_init';
+
+.calendar-day-event {
+    &_date {
+        @include map-font-style(link-text, jp-large);
+        height: 27px;
+        font-size: 24px;
+    }
+
+    &_title {
+        padding-top: 20px;
+        @include map-font-style(body-copy-reg, jp-large);
+        height: 20px;
+
+    }
+
+    &_list {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        column-gap: 60px;
+        column-rule: 1px solid lightblue;
+
+        &_events {
+            @include map-font-style(nav-link, jp-large);
+
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+}

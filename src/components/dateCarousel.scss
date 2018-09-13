@@ -1,0 +1,38 @@
+@import 'styles/_init';
+.calender-selectedText{
+    width: 250px;
+    display: flex;
+    &_pre{
+        width: 8.7px;
+        height: 13px;
+        padding: 3px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    &_text{
+        height: 32px;
+        @include map-font-style(header-center, jp-large);
+        width: 100%;
+    }
+    &_next{
+        width: 8.7px;
+        height: 13px;
+        padding: 3px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    &_jump-today{
+        @include map-font-style(text-link, jp-large);
+        height: 32px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.63;
+        padding-top:1px;
+        border: none;
+        background-color: initial;
+        text-decoration: underline;
+        margin-left: 59px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
