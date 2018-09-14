@@ -269,7 +269,9 @@
 .calendar {
 	border-top: 6px solid #006496;
 	border-bottom: 4px solid #63666a;
-	padding: 1%; }
+	padding: 1%;
+	background-color: #f2f0f1;
+ }
 
 .calendar_day-month-toggle {
 	display: -webkit-box;
@@ -298,6 +300,7 @@
 
 .calendar_result-region {
 	margin-top: 30px;
+	background-color: white;
 	 }
 
 .fill {

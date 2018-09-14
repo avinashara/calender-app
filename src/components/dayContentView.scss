@@ -2,7 +2,7 @@
 .day-content{
     width: 200px;
     height: 198px;
-    padding: 5px;
+    padding: 8.5px;
     background-color: map-get($jp-colors, white);
     border: solid 1px #93989e;
     display: block;
@@ -29,6 +29,9 @@
         height: 28px;
         opacity: 0.4;
         font-size: 12px;
+        &_list{
+            list-style: none;
+        }
     }
     &_day-button{
         @include map-font-style(body-copy-light, jp-large);        

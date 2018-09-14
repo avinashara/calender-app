@@ -3,15 +3,11 @@ import "./calendarByMonth.css";
 import DayContentView from "./dayContentView";
 import { connect } from "react-redux";
 import {DAYS_NAME} from '../js/constants/constant';
-import {createDaysArray} from '../js/calendar/calendarFeature';
+
 
 class CalendarByMonth extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
-      let days= createDaysArray(new Date());
+      let days= this.props.calendarData;
     return (
       <section className="calendar-by-month">      
         {DAYS_NAME.map((name,i)=>{
@@ -24,4 +20,10 @@ class CalendarByMonth extends Component {
     );
   }
 }
-export default CalendarByMonth;
+const mapStateToProps = state => { 
+  return { 
+              currDate:state.currDate,
+              calendarData:state.calendarData
+          };
+};
+export default connect(mapStateToProps, null)(CalendarByMonth);

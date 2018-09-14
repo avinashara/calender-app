@@ -1,7 +1,10 @@
 @import 'styles/_init';
 .calender-selectedText{
-    width: 250px;
+    width: 275px;
     display: flex;
+    &_dy{
+        width: 345px;
+    }
     &_pre{
         width: 8.7px;
         height: 13px;
@@ -31,8 +34,9 @@
         border: none;
         background-color: initial;
         text-decoration: underline;
-        margin-left: 59px;
+        margin-left:27%;
         font-weight: 600;
         cursor: pointer;
+        outline: none;
     }
 }

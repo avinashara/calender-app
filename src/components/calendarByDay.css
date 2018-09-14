@@ -265,7 +265,10 @@
 		   object-fit: none;
 		-o-object-position: bottom right;
 		   object-position: bottom right; } }
-
+.calendar-day-event{
+	padding: 25px 30px;
+	height: 950px;
+}
 .calendar-day-event_date {
 	font-style: normal;
 	font-stretch: normal;
@@ -287,7 +290,6 @@
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.25;
-	text-align: center;
 	color: #2b2b2b;
 	height: 20px; }
 
