@@ -24,12 +24,14 @@ class DayContentView extends Component{
         this.props.onSetForceUpdateSelType(obj);
     }
     render =()=>{
-        let data=this.props.record,refToday=data.number, today=new Date().getDate(),
+        let data=this.props.record,today=new Date(),
         events=data.events.slice(0,2);
+        let currDate= this.props.currDate,
+        border=(today.getDate()===data.number && currDate.getMonth()=== today.getMonth() && currDate.getFullYear()=== today.getFullYear())?true:false;        
         return (
-            <section className={refToday===today?"day-content border":"day-content"}>
+            <section className={border?"day-content border":"day-content"}>
                 <section className="day-content_day-text">
-                    <span>{refToday}</span>
+                    <span>{data.number}</span>
                 </section>
                 <section className="day-content_day-title">
                     <span>{data.title}</span>
