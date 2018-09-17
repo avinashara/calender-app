@@ -347,7 +347,7 @@
 
 .day-content {
 	height: 198px;
-	padding: 8.4px;
+	padding: 8px;
 	background-color: #ffffff;
 	border: solid 1px #93989e;
 	display: inline-block;
@@ -396,7 +396,7 @@
 	line-height: 1.25;
 	color: #63666a;	
 	width: 180px;
-	height: 125px;
+	height: 115px;
 	opacity: 0.4;
 	font-size: 12px;
 	overflow: hidden;
@@ -404,7 +404,7 @@
 
 .day-content_day-events_list {
 	list-style: none;
-	height: 28px;
+	height: 15px;
 	padding-bottom: 8px;
 }
 
@@ -416,12 +416,11 @@
 	color: #63666a;
 	border: none;
 	height: 18px;
-	opacity: 0.4;
     background-color: initial;
     width: 184px;
     text-align: right;
-    display: inline-table;
-    cursor: pointer;
+	cursor: pointer;
+	position: absolute;
 }
 
 .day-content_hide {

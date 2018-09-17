@@ -5,7 +5,9 @@ import {Provider} from 'react-redux';
 import store from './js/store/store';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import {getCalenderData} from './js/dataServices/dataService';
+
+store.dispatch(getCalenderData());
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
-//ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

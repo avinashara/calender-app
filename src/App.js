@@ -5,14 +5,14 @@ import CalendarByMonth from './components/calendarByMonth';
 import DateCarousel from './components/dateCarousel';
 import { connect } from "react-redux";
 import { setSelType,setCalendarData } from "./js/actions/action";
-import {getCalenderData} from './js/dataServices/dataService'
+//import {getCalenderData} from './js/dataServices/dataService';
 
 class App extends Component { 
-  componentDidMount(){
-    getCalenderData().then((res)=>{
-      this.props.onSetCalendarData(res);
-    });    
-  }
+  // componentDidMount(){
+  //   getCalenderData().then((res)=>{
+  //     this.props.onSetCalendarData(res);
+  //   });    
+  // }
   
   handletoggle=(flag)=>{
     this.props.onSetType(flag);

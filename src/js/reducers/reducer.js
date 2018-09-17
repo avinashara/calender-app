@@ -4,7 +4,7 @@ const initialState={
     selectedDate:`${MONTHS_NAME[TODAY.getMonth()]}, ${TODAY.getFullYear()}`,
     selType:'M',
     currDate: TODAY,
-    calendarData:[]
+    apiData:[]
 }
 const rootReducer=(state=initialState,{type,payload})=>{
     switch (type){
@@ -17,7 +17,7 @@ const rootReducer=(state=initialState,{type,payload})=>{
                 }else{
                     selectedDate=`${MONTHS_NAME[TODAY.getMonth()]} ${getGetOrdinal(TODAY.getDate())}, ${TODAY.getFullYear()}`;
                 }                 
-            return {...state,selType:payload,selectedDate:selectedDate};
+            return {...state,selType:payload,selectedDate:selectedDate,currDate:TODAY};
         case SET_SEL_DATE:
             return {...state, selectedDate:payload,currDate:new Date()};
         case SET_CUR_DATE:            
@@ -26,7 +26,7 @@ const rootReducer=(state=initialState,{type,payload})=>{
             let selectedDateText=`${MONTHS_NAME[payload.currDate.getMonth()]} ${getGetOrdinal(payload.currDate.getDate())}, ${payload.currDate.getFullYear()}`;
             return {...state, selType:'D',currDate:payload.currDate,selectedDate:selectedDateText};
         case GET_CALENDAR_DATA:
-            return {...state, calendarData:payload} 
+            return {...state, apiData:payload} 
         default:
             return state;
     }

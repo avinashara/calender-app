@@ -24,7 +24,7 @@ export function createDaysArray(date, data) {
             number: first_array_element + i,
             from: 'pm',
             events: data[text] ? data[text] : [],
-            title: "NO Dealing"
+            title: "No Dealing"
         }
     }
     for (let k = 1; k <= current_month_last_day; ++k) {       
@@ -34,7 +34,7 @@ export function createDaysArray(date, data) {
             from: 'cm',
             weekend: i % 7 > 4,
             events: data[text] ? data[text] : [],
-            title: "NO Dealing"
+            title: "No Dealing"
         }
         i++;
     }
@@ -44,7 +44,7 @@ export function createDaysArray(date, data) {
             number: k + 1,
             from: 'nm',
             events: data[text] ? data[text] : [],
-            title: "NO Dealing"
+            title: "No Dealing"
         }
         i++;
     }
@@ -63,3 +63,8 @@ function getDateString(date, day, flag) {
     return `${date.getFullYear()}-${originalMonth}-${day}`;
 }
 this.getDateString = getDateString.bind(this);
+
+export function getDayEvents(date,data){
+    let day=getDateString(date,date.getDate(),'cm');
+    return data[day]?data[day]:[];
+}

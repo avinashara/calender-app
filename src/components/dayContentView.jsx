@@ -25,7 +25,7 @@ class DayContentView extends Component{
     }
     render =()=>{
         let data=this.props.record,refToday=data.number, today=new Date().getDate(),
-        events=[];//data.events.slice(0,2);
+        events=data.events.slice(0,2);
         return (
             <section className={refToday===today?"day-content border":"day-content"}>
                 <section className="day-content_day-text">
@@ -39,7 +39,7 @@ class DayContentView extends Component{
                         return <li className="day-content_day-events_list" key={i}>{event.name}</li>
                     })}
                 </section>
-                <button onClick={()=>this.handleViewAll(data)} className={data.events.length>2?"day-content_day-button_text":" day-content_day-button_text day-content_hide"}>View All({data.events.length})</button>
+                <button onClick={()=>this.handleViewAll(data)} className={data.events.length>2?"day-content_day-button_text":" day-content_day-button_text day-content_hide"}>View All({data.events.length})&ensp;&gt;&ensp;</button>
             </section>
         )
     }
